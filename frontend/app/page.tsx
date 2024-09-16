@@ -6,7 +6,7 @@ export default function Home() {
 
 
    <div className="">
-      <main className="flex-grow border-2 ">
+      <main className="flex-grow">
         <Main 
           title="" 
           section="Home" 
