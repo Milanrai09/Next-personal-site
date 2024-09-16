@@ -89,11 +89,11 @@ export default function Component({ title, section, mainAttribute }: MainProp) {
                   </span>
                 </div>
               </div>
-              <div className="md:w-1/2">
+              <div className="md:w-1/2 ">
                 <img
                   src="https://img.freepik.com/premium-photo/male-computer-programmer-coding-front-monitor_225297-118.jpg"
                   alt="Programmer"
-                  className="w-full max-w-md mx-auto rounded-lg shadow-lg"
+                  className="w-full max-w-md mx-auto rounded-lg shadow-lg md:pt-24"
                 />
               </div>
             </div>
