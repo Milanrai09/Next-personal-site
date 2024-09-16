@@ -40,7 +40,7 @@ export default function Component({ title, section, mainAttribute }: MainProp) {
         className="bg-cover bg-center"
         style={{ backgroundImage: `url('https://www.hdwallpapers.in/download/abstract_wallpaper_for_pc_4k_hd-1600x900.jpg')` }}
       >    
-        <nav className="bg-transparent w-screen fixed border-2 h-20 flex justify-center items-center z-50 top-0">
+        <nav className="bg-transparent w-screen fixed h-20 flex justify-center items-center z-50 top-0">
           <ul className="flex justify-center space-x-4">
             <li>
               <a href="#about-yourself" onClick={handleClick}>
