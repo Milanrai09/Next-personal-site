@@ -68,7 +68,7 @@ export default function Component({ title, section, mainAttribute }: MainProp) {
           </ul>
         </nav>
       </div>
-vsdfgfsdffd
+
       <div className="pt-40 md:pt-0 mt-12 md:mt-0">
         <section id="about-yourself" ref={addToRefs} className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white font-['Montserrat',sans-serif]">
           <div className="container mx-auto px-4">
