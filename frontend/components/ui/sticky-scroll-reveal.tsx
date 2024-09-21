@@ -11,6 +11,8 @@ export const StickyScroll = ({
   content: {
     title: string;
     description: string;
+    liveLink: string;
+    githubLink: string;
     content?: React.ReactNode | any;
   }[];
   contentClassName?: string;
@@ -18,7 +20,6 @@ export const StickyScroll = ({
   const [activeCard, setActiveCard] = React.useState(0);
   const ref = useRef<any>(null);
   const { scrollYProgress } = useScroll({
-
     container: ref,
     offset: ["start start", "end start"],
   });
@@ -63,44 +64,58 @@ export const StickyScroll = ({
       animate={{
         backgroundColor: backgroundColors[activeCard % backgroundColors.length],
       }}
-      className="h-[30rem] overflow-y-auto flex justify-center relative space-x-7 rounded-md p-10  "
+      className="h-[30rem] overflow-y-auto flex justify-center relative space-x-7 rounded-lg p-10"
       ref={ref}
     >
-      <div className="div relative flex items-start min-w-50  ">
-        <div className="max-w-1/4 text-sm text-center  bg-gray-700 ">
+      <div className="div relative flex items-start min-w-50">
+        <div className="max-w-1/4 text-sm text-center bg-gray-700 rounded-lg">
           {content.map((item, index) => (
             <div key={item.title + index} className="my-20">
               <motion.h2
-                initial={{
-                  opacity: 0,
-                }}
-                animate={{
-                  opacity: activeCard === index ? 1 : 0.3,
-                }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: activeCard === index ? 1 : 0.3 }}
                 className="text-2xl font-bold text-slate-100"
               >
                 {item.title}
               </motion.h2>
               <motion.p
-                initial={{
-                  opacity: 0,
-                }}
-                animate={{
-                  opacity: activeCard === index ? 1 : 0.3,
-                }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: activeCard === index ? 1 : 0.3 }}
                 className="text-kg text-slate-300 max-w-full mt-10 max-w-96 py-9"
               >
                 {item.description}
               </motion.p>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: activeCard === index ? 1 : 0.3 }}
+                className="flex justify-center space-x-4 mt-4"
+              >
+                <a
+                  href={item.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-semibold text-blue-400 hover:text-blue-300 cursor-pointer"
+                >
+                  GitHub
+                </a>
+                <a
+                  href={item.liveLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-semibold text-green-400 hover:text-green-300 cursor-pointer"
+                >
+                  Live Demo
+                </a>
+              </motion.div>
             </div>
           ))}
-          <div className="h-40 " />
+          <div className="h-40" />
         </div>
       </div>
       <div
         style={{ background: backgroundGradient }}
         className={cn(
-          "hidden md:block h-60 min-w-80 rounded-md  sticky top-10  overflow-hidden",
+          "hidden md:block h-60 min-w-80 rounded-md sticky top-10 overflow-hidden",
           contentClassName
         )}
       >

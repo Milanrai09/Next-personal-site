@@ -12,7 +12,7 @@ export const projects = [
   {
     title: "Health-Hub",
     description:"A health app where you can search and find food nutritional values, (read, create , edit, save ,like, dislike and delete) Articles.Admin panel is also there",
-    link: "https://netflix.com",
+    link: "https://github.com/Milanrai09/fullstack-health",
 
     
   },
@@ -20,20 +20,15 @@ export const projects = [
     title: "FUllSTACK-ECOMMERCE",
     description:
       "Search product add to cart , checkout, ordelist, admin funtionalities are some of the features ",
-    link: "https://netflix.com",
+    link: "https://github.com/Milanrai09/ecommerce-fullstack",
   },
 
   {
     title: "TRAVLLING-SITE",
     description:
       "A travel site where you can plan your travles",
-    link: "https://google.com",
+    link: "https://github.com/Milanrai09/React-Traveling-site",
   },
-  {
-    title: "E",
-    description:
-      "A technology company that focuses on building products that advance Facebook's mission of bringing the world closer together.",
-    link: "https://meta.com",
-  },
+
 
 ];
