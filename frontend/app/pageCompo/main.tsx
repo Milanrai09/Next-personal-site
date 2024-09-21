@@ -69,7 +69,7 @@ export default function Component({ title, section, mainAttribute }: MainProp) {
         </nav>
       </div>
 
-      <div className="pt-40 md:pt-0">
+      <div className="pt-40 md:pt-0 mt-12 md:mt-0">
         <section id="about-yourself" ref={addToRefs} className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white font-['Montserrat',sans-serif]">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row items-center justify-between">
@@ -89,7 +89,7 @@ export default function Component({ title, section, mainAttribute }: MainProp) {
                   </span>
                 </div>
               </div>
-              <div className="md:w-1/2 ">
+              <div className="md:w-1/2 mt-9 md:mt-0">
                 <img
                   src="https://img.freepik.com/premium-photo/male-computer-programmer-coding-front-monitor_225297-118.jpg"
                   alt="Programmer"
